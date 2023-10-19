@@ -1,3 +1,6 @@
-site_name: Aurthor Docs
+site_name: Arthur Docs
 
 theme: windmill-dark
+
+nav:
+  - Home: 'index.md'
