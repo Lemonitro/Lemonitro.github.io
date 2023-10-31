@@ -12,13 +12,13 @@ public class building implements building_interface{
     //building should be the generic constructor that all buildings will extend from
     public building(){
         this.value = 0;
-            building_table.put("Value ", " " + value);
+            building_table.put("Value", value);
         this.upgrade_lvl = 0;
-            building_table.put("Upgrade Level ", " " + upgrade_lvl);
+            building_table.put("Upgrade Level", upgrade_lvl);
         this.building_name = "Placeholder";
-            building_table.put("Building Name ", " " + building_name);
+            building_table.put("Building Name", building_name);
         this.craft_recipe = "Null"; 
-            building_table.put("Craft Recipe ", " " + craft_recipe);
+            building_table.put("Craft Recipe", craft_recipe);
     }
 
     //The way this works, is that the constructor will also create a hashtable will all the information/variables it uses
@@ -72,7 +72,8 @@ public class building implements building_interface{
     //Changes upgrade_level of the building, internally calls configure to change possible settings
     //Might also add extra features.
     public Object upgrade(){
-        this.upgrade_lvl = upgrade_lvl+1;
-        return upgrade_lvl;
+    this.upgrade_lvl++;
+    building_table.put("Upgrade Level", upgrade_lvl);
+    return upgrade_lvl;
     }
 }
