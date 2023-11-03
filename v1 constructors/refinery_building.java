@@ -20,6 +20,11 @@ public class refinery_building extends building{
     this.upgrade_lvl++;
     building_table.put("Upgrade Level", upgrade_lvl);
     return upgrade_lvl;
-    
+    }
+
+    public Object craft(Object cRecipe){
+        this.craft_recipe = cRecipe;
+        building_table.put("Craft Recipe", cRecipe);
+        return craft_recipe;
     }
 }
