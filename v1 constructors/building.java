@@ -32,6 +32,7 @@ public class building implements building_interface{
     //E.g Quarry, can have as its crafting recipe: Iron, Gold etc. it will generate these resources (Creates new objects within a object class)
     public Object craft(Object cRecipe){
         this.craft_recipe = cRecipe;
+        building_table.put("Craft Recipe", cRecipe);
         return craft_recipe;
     }
 

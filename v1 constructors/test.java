@@ -1,6 +1,7 @@
 class test{
 public static void main(String[] args) {
     building building_1 = new building();
+    Object a = "Crafting Recipe 1";
     System.out.println(building_1);
     System.out.println("");
     building_1.info();
@@ -17,6 +18,10 @@ public static void main(String[] args) {
     System.out.println(refinery_1.upgrade_lvl);
     System.out.println(refinery_1.building_table.get("Upgrade Level"));
     refinery_1.info();
-
+    System.out.println(refinery_1);
+    System.out.println(refinery_1.upgrade_lvl);
+    refinery_1.info();
+    building_1.craft(a);
+    building_1.info();
 }
 }

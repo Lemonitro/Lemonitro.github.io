@@ -10,7 +10,7 @@ public class refinery_building extends building{
         this.craft_recipe = "Null"; 
             building_table.put("Craft Recipe", craft_recipe);
     }
-    
+
     public Object info(){
         System.out.println(this.building_table);
         return building_table;
@@ -20,5 +20,6 @@ public class refinery_building extends building{
     this.upgrade_lvl++;
     building_table.put("Upgrade Level", upgrade_lvl);
     return upgrade_lvl;
+    
     }
 }
