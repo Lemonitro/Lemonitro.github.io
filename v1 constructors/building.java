@@ -24,7 +24,6 @@ public class building implements building_interface{
     //The way this works, is that the constructor will also create a hashtable will all the information/variables it uses
     //Info should return the hashtable (Albeit maybe customized for style n what not)
     public Object info(){
-        System.out.println(this.building_table);
         return building_table;
     }
 

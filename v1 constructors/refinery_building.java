@@ -12,7 +12,6 @@ public class refinery_building extends building{
     }
 
     public Object info(){
-        System.out.println(this.building_table);
         return building_table;
     }
 
