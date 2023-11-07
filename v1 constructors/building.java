@@ -3,17 +3,29 @@ import java.util.Hashtable;
 
 public class building implements building_interface{
     private static final Object Object = null;
-    public int value = 0; //Cost of the building (To calculate sell)
-    public int upgrade_lvl = 0; //Current upgrade
+    public int value = 0; //Cost of the building (To calculate sell
     public String building_name = ""; //Building name (Also type)
     public Object craft_recipe; //Craft recipe in the building
     Hashtable<String, Object> building_table = new Hashtable<>();
 
+    //Binary Tree For Building
+    public BinaryTree upgrade_lvl_tree = new BinaryTree(10);
+    public Node upgrade_lvl;
+
     //building should be the generic constructor that all buildings will extend from
     public building(){
+    //Constructor makes binary tree nodes:
+    this.upgrade_lvl_tree.insert(12);
+    this.upgrade_lvl_tree.insert(2);
+    this.upgrade_lvl_tree.insert(1);
+    this.upgrade_lvl_tree.insert(3);
+    this.upgrade_lvl_tree.insert(11);
+    this.upgrade_lvl_tree.insert(41);
+
+    //Declares other values, and puts them in the hashtable
         this.value = 0;
             building_table.put("Value", value);
-        this.upgrade_lvl = 0;
+        this.upgrade_lvl = upgrade_lvl_tree.root;
             building_table.put("Upgrade Level", upgrade_lvl);
         this.building_name = "Placeholder";
             building_table.put("Building Name", building_name);
@@ -72,8 +84,6 @@ public class building implements building_interface{
     //Changes upgrade_level of the building, internally calls configure to change possible settings
     //Might also add extra features.
     public Object upgrade(){
-    this.upgrade_lvl++;
-    building_table.put("Upgrade Level", upgrade_lvl);
-    return upgrade_lvl;
+        return Object;
     }
 }

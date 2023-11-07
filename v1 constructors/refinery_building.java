@@ -3,7 +3,7 @@ public class refinery_building extends building{
         super();
         this.value = 2000;
             building_table.put("Value", value);
-        this.upgrade_lvl = 0;
+        this.upgrade_lvl_tree.root = new Node(0);
             building_table.put("Upgrade Level", upgrade_lvl);
         this.building_name = "Refinery";
             building_table.put("Building Name", building_name);
@@ -16,7 +16,8 @@ public class refinery_building extends building{
     }
 
     public Object upgrade(){
-    this.upgrade_lvl++;
+    this.upgrade_lvl_tree.root.left = new Node(2);
+    upgrade_lvl = upgrade_lvl_tree.root.left;
     building_table.put("Upgrade Level", upgrade_lvl);
     return upgrade_lvl;
     }
