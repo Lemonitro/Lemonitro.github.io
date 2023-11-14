@@ -25,5 +25,7 @@ public static void main(String[] args) {
     System.out.println(building_1.upgrade_lvl_tree.root.right.left.key);
     System.out.println(building_1.upgrade_lvl_tree.root.right.left);
 
+    System.out.println(building_1.upgrade("Up"));
+    System.out.println(building_1.upgrade("DOWN"));
 }
 }

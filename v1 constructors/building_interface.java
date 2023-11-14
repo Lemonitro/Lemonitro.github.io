@@ -17,5 +17,5 @@ public interface building_interface{
     public Object rotate();
     public int sell();
     public Object move();
-    public Object upgrade();
+    public Object upgrade(String UpDown);
 }

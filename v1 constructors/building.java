@@ -83,7 +83,15 @@ public class building implements building_interface{
     
     //Changes upgrade_level of the building, internally calls configure to change possible settings
     //Might also add extra features.
-    public Object upgrade(){
-        return Object;
+    public Object upgrade(String UpDown){
+        if(UpDown.toUpperCase() == "UP"){
+            this.upgrade_lvl = upgrade_lvl_tree.root.right;
+            return building_table;
+        }
+        if(UpDown.toUpperCase() == "DOWN"){
+            this.upgrade_lvl = upgrade_lvl_tree.root.right;
+            return building_table;
+        }
+        return null;
     }
 }
