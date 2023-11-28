@@ -2,7 +2,7 @@
 import java.util.Hashtable;
 
 public class building implements building_interface{
-    private static final Object Object = null;
+    public static final Object Object = null;
     public int value = 0; //Cost of the building (To calculate sell
     public String building_name = ""; //Building name (Also type)
     public Object craft_recipe; //Craft recipe in the building
@@ -15,12 +15,12 @@ public class building implements building_interface{
     //building should be the generic constructor that all buildings will extend from
     public building(){
     //Constructor makes binary tree nodes:
-    this.upgrade_lvl_tree.insert(12);
-    this.upgrade_lvl_tree.insert(2);
-    this.upgrade_lvl_tree.insert(1);
-    this.upgrade_lvl_tree.insert(3);
-    this.upgrade_lvl_tree.insert(11);
-    this.upgrade_lvl_tree.insert(41);
+    // this.upgrade_lvl_tree.insert(12);
+    // this.upgrade_lvl_tree.insert(2);
+    // this.upgrade_lvl_tree.insert(1);
+    // this.upgrade_lvl_tree.insert(3);
+    // this.upgrade_lvl_tree.insert(11);
+    // this.upgrade_lvl_tree.insert(41);
 
     //Declares other values, and puts them in the hashtable
         this.value = 0;
@@ -50,7 +50,6 @@ public class building implements building_interface{
     //Might change specific elements within craft_recipe...
     //How many it makes, queue times, etc. Might be called when building "upgrades" so can be used internally and externally
     public Object configure(){
-        System.out.println(building_table);
         //Wait for input (What specifically you want to change... then move forward from there)
         return Object;
     }
@@ -93,5 +92,10 @@ public class building implements building_interface{
             return building_table;
         }
         return null;
+    }
+
+    public Object recipeinfo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'recipeinfo'");
     }
 }

@@ -1,4 +1,8 @@
 public class refinery_building extends building{
+    private String Lumber = "Lumber";// I'll make it later...
+    private String Cutstone = "Cutstone";
+    public Object[] refinery_recipes = new Object[]{Lumber, Cutstone};
+
     public refinery_building(){
         super();
         this.value = 2000;
@@ -11,8 +15,15 @@ public class refinery_building extends building{
             building_table.put("Craft Recipe", craft_recipe);
     }
 
+    //COMPLICATED S**** I DONT WANT TO MAKE SENSE OF
+
+
     public Object info(){
         return building_table;
+    }
+
+    public Object recipeinfo(){
+        return refinery_recipes;
     }
 
     public Object upgrade(){
@@ -27,4 +38,6 @@ public class refinery_building extends building{
         building_table.put("Craft Recipe", cRecipe);
         return craft_recipe;
     }
+
+
 }
