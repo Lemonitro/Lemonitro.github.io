@@ -1,7 +1,7 @@
 public class refinery_building extends building{
     private String Lumber = "Lumber";// I'll make it later...
     private String Cutstone = "Cutstone";
-    public Object[] refinery_recipes = new Object[]{Null, Lumber, Cutstone};
+    public Object[] refinery_recipes = new Object[]{Lumber, Cutstone};
 
     public refinery_building(){
         super();
@@ -19,10 +19,6 @@ public class refinery_building extends building{
         return building_table;
     }
 
-    public Object recipeinfo(){
-        return refinery_recipes;
-    }
-
     public Object upgrade(){
     this.upgrade_lvl_tree.root.left = new Node(2);
     upgrade_lvl = upgrade_lvl_tree.root.left;
@@ -30,10 +26,11 @@ public class refinery_building extends building{
     return upgrade_lvl;
     }
 
-    public Object craft(Object cRecipe){
+    public Object craft(String cRecipe){
         for(int x=0; x<refinery_recipes.length; x++){
             if(refinery_recipes[x].equals(cRecipe)){
                 this.craft_recipe = refinery_recipes[x];
+                this.building_table.put("Craft Recipe", craft_recipe);
                 return refinery_recipes[x];
             }
         }

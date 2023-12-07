@@ -28,9 +28,14 @@ public static void main(String[] args) {
     // System.out.println(building_1.upgrade("Up"));
     // System.out.println(building_1.upgrade("DOWN"));
     refinery_building building_1 = new refinery_building();
-    System.out.println(building_1.recipeinfo());
     System.out.println();
     System.out.println(building_1.refinery_recipes[0]);
     System.out.println(building_1.refinery_recipes[1]);
+    System.out.println(building_1.craft("Lumber"));
+    System.out.println(building_1.building_table);
+
+    System.out.println();
+    System.out.println(building_1.craft("Cutstone"));
+    System.out.println(building_1.building_table);
 }
 }
