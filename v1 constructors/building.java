@@ -93,9 +93,4 @@ public class building implements building_interface{
         }
         return null;
     }
-
-    public Object recipeinfo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recipeinfo'");
-    }
 }

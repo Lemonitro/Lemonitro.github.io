@@ -4,7 +4,6 @@ public interface building_interface{
     //Craft sets the current recipe the building will have
     //Configure will change other specific recipe methods (Craft until, wait for... etc)
     public Object info();
-    public Object recipeinfo();
     public Object craft(Object cRecipe);
     public Object configure();
 
